@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Login page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p>Please enter your login details below:</p>
+        <form action="TheLoginServlet.do" method="POST">
+            <table border="1">
+                <tr>
+                    <td>Username:</td>
+                    <td><input type="text" name="username" placeholder="Enter user name" required></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="text" name="password" placeholder="Enter password" required /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="submit"/></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

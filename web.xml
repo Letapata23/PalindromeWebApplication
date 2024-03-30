@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>PalindromeServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.PalindromeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EndSessionServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.EndSessionServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TheLoginServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.TheLoginServlet</servlet-class>
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>app</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>123</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PalindromeServlet</servlet-name>
+        <url-pattern>/PalindromeServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EndSessionServlet</servlet-name>
+        <url-pattern>/EndSessionServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TheLoginServlet</servlet-name>
+        <url-pattern>/TheLoginServlet.do</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <context-param>
+        <param-name>Name</param-name>
+        <param-value>Mr L Qhobela</param-value>
+    </context-param>
+    <context-param>
+        <param-name>Email</param-name>
+        <param-value>Letapataqhobela@gmail.com</param-value>
+    </context-param>
+    <error-page>
+        <exception-type>za.ac.tut.model.InvalidLoginException</exception-type>
+        <location>/invalid_password.jsp</location>
+    </error-page>
+    <context-param>
+        <param-name>comp_name</param-name>
+        <param-value>Siri</param-value>
+    </context-param>
+</web-app>
